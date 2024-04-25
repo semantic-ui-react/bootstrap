@@ -1,6 +1,6 @@
 {
-  "name": "foo",
-  "version": "1.2.3",
+  "name": "@semantic-ui-react/bootstrap",
+  "version": "0.0.0",
   "private": true,
   "bin": {
     "boostrap": "./index.js"
