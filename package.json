@@ -1,3 +1,5 @@
 {
-  "bin": "./index.js"
+  "bin": {
+    "boostrap": "./index.js"
+  }
 }
