@@ -1,20 +1,19 @@
 #!/usr/bin/env node
 const os = require("os");
+const pkg = require("./package.json");
 
 const { username } = os.userInfo();
-
-const pkgname = `${__filename.split("/").slice(-3, -1).join("/")}`;
 
 console.log(`
 Hello ${username}!
 
 This is a demonstration of how to typosquat popular
-scoped NPM packages ("@${pkgname}") by taking control of
-similar GitHub repos ("github.com/${pkgname}").
+scoped NPM packages ("${pkg.name}") by taking control of
+similar GitHub repos ("github.com/${pkg.name.slice(1)}").
 
 Don't worry, this is completely harmless. But at this point
 a malicious party could run whatever code.
 
-You probably wanted to run \`npx @${pkgname} ...\`.
+You probably wanted to run \`npx ${pkg.name} ...\`.
 `);
 process.exit(1);
